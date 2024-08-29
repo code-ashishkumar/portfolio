@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: Helvetica;
+    /* font-weight: 400; */
+    src: url(../src/assets/fonts/HelveticaNeueLight.otf) format("otf");
+  }
+}
+
+body {
+  font-family: Helvetica;
+  font-weight: lighter;
+  background-color: black;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  z-index: 11;
+  
+}
