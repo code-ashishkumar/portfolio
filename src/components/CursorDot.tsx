@@ -45,7 +45,8 @@ const CursorDot = () => {
 
         // Apply updated position to the dot
         dot.style.transform = `translate(-50%, -50%) translate(${dotPosition.current.x}px, ${dotPosition.current.y}px)`;
-
+        // dot.style.mixBlendMode = "diffrence";
+        // console.log(dot.style);
         // Request next animation frame
         requestRef.current = requestAnimationFrame(updateDotPosition);
       }
@@ -85,11 +86,13 @@ const CursorDot = () => {
         position: "fixed",
         width: "40px",
         height: "40px",
-        backgroundColor: isHovered ? "white" : "white",
+        backgroundColor: isHovered ? "black" : "black",
+        background: "white",
         borderRadius: "50%",
         pointerEvents: "none",
         zIndex: 9999,
         transformOrigin: "center",
+        mixBlendMode: "difference",
         willChange: "transform, background-color",
         transition: "transform 0.1s ease-out, background-color 0.1s ease-out",
         transform: isHovered ? "scale(1.5)" : "scale(1)", // Scale up on hover

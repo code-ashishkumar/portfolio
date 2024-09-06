@@ -13,13 +13,76 @@
 body {
   font-family: Helvetica;
   font-weight: lighter;
-  background-color: black;
+  /* color: black; */
+  background-color: white;
+  --black: #000000;
+  --ash-black: #222;
+  --white: #fafafa;
+  --sky: #00ccff;
+  --green: #22dddd;
+  --blue: #1300ff;
+  --dusk: #6600ff;
+  --purple: #9900ff;
+  --pink: #ff0066;
+  --red: #fe0222;
+  --orange: #fd7702;
+  --yellow: #ffbb00;
+
+  --background: var(--black);
+  --accent: var(--red);
 }
 
 a {
-  color: white;
+  color: black;
   text-decoration: none;
   transition: color 0.3s ease;
   z-index: 11;
-  
+}
+
+.image {
+  /* height: 400px; */
+  border-radius: 20% !important;
+}
+
+.projects img {
+  width: 600px !important;
+  border-radius: 6% !important;
+  height: 400px;
+}
+
+h1, h2, h3, h4, h5, h6 , a, span {
+  /* mix-blend-mode: difference; */
+  /* color: white; */
+  /* z-index: 10000; */
+}
+
+
+
+.progress {
+  position: sticky;
+  top: 70px;
+  /* width: 80px;
+  height: 80px;
+  margin: 0;
+  padding: 0; */
+}
+
+.progress svg {
+  transform: translateX(-100px) rotate(-90deg);
+}
+
+
+
+section {
+  height: auto;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  position: relative;
+}
+
+section div {
+  /* width: 200px; */
+  /* height: 100%; */
+  position: relative;
 }
