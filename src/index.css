@@ -59,8 +59,11 @@ h1, h2, h3, h4, h5, h6 , a, span {
 
 
 .progress {
-  position: sticky;
-  top: 70px;
+  @media (min-width : 1024px) {
+    position: sticky;
+    top: 70px;
+  }
+
   /* width: 80px;
   height: 80px;
   margin: 0;

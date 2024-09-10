@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 
-// Utility function for smooth interpolation
 const lerp = (start, end, t) => start + (end - start) * t;
 
 const CursorDot = () => {

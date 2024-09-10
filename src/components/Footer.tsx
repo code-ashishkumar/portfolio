@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import avatar from "../assets/IMG_1667.jpg";
 
 // Social media links
 const socialLinks = [
@@ -124,17 +125,35 @@ const Footer = () => {
           </motion.div>
 
           {/* Bottom Section with Image */}
-          <motion.div
+          {/* <motion.div
             className=" w-full"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
             <img
-              src="https://via.placeholder.com/1200x400?text=Your+Image"
+              src={avatar}
               alt="Footer Image"
-              className="rounded-lg shadow-lg object-cover  w-full"
+              className="rounded-lg shadow-lg object-contain   w-full h-96"
             />
+          </motion.div> */}
+          <motion.div
+            className="relative rounded-lg pt-2 shadow-lg object-contain h-96 w-full"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+          >
+            {/* Image */}
+            <motion.img
+              src={avatar}
+              alt="Ashish Kumar"
+              className="rounded-lg w-full h-full object-contain"
+              width="200px"
+              height="200px"
+            />
+
+            {/* Gray overlay div */}
+            <motion.div className="absolute inset-0 bg-gray-200 bg-opacity-50 transition-opacity duration-300 hover:opacity-0"></motion.div>
           </motion.div>
         </div>
       </footer>
