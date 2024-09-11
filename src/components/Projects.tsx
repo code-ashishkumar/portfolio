@@ -1,21 +1,20 @@
-import { useRef } from "react";
-import { motion, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 
-function Item({ id, title, content }) {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["end end", "start start"],
-  });
+// function Item({ id, title, content }) {
+//   const ref = useRef(null);
+//   const { scrollYProgress } = useScroll({
+//     target: ref,
+//     offset: ["end end", "start start"],
+//   });
 
-  return (
-    <section className="grid relative py-20 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4  px-8">
-      <h1 className="progress text-4xl font-medium px-1 py-4">{id}</h1>
-      <h1 className="progress text-6xl font-medium px-2 py-4 ">{title}</h1>
-      <div className="py-4 text-gray-400 col-span-2">{content}</div>
-    </section>
-  );
-}
+//   return (
+//     <section className="grid relative py-20 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4  px-8">
+//       <h1 className="progress text-4xl font-medium px-1 py-4">{id}</h1>
+//       <h1 className="progress text-6xl font-medium px-2 py-4 ">{title}</h1>
+//       <div className="py-4 text-gray-400 col-span-2">{content}</div>
+//     </section>
+//   );
+// }
 
 export default function Projects() {
   const text = [
@@ -38,30 +37,30 @@ export default function Projects() {
     { content: "finish", fade: false },
   ];
 
-  const experiences = [
-    {
-      id: "1",
-      title: "React Developer",
-      content: `Experience Experience Experience Experience Experience Experience
-        Experience Experience Experience Experience Experience Experience
-        Experience Experience Experience Experience Experience Experience
-        Experience Experience Experience Experience Experience Experience
-        Experience Experience Experience Experience Experience Experience
-        Experience Experience Experience Experience Experience Experience
-        Experience Experience Experience Experience Experience Experience
-        Experience Experience Experience Experience Experience Experience`,
-    },
-    {
-      id: "2",
-      title: "Web Developer",
-      content: "Experience with React, Next.js, and Tailwind CSS",
-    },
-    {
-      id: "3",
-      title: "Python Developer",
-      content: "Experience with React, Next.js, and Tailwind CSS",
-    },
-  ];
+  // const experiences = [
+  //   {
+  //     id: "1",
+  //     title: "React Developer",
+  //     content: `Experience Experience Experience Experience Experience Experience
+  //       Experience Experience Experience Experience Experience Experience
+  //       Experience Experience Experience Experience Experience Experience
+  //       Experience Experience Experience Experience Experience Experience
+  //       Experience Experience Experience Experience Experience Experience
+  //       Experience Experience Experience Experience Experience Experience
+  //       Experience Experience Experience Experience Experience Experience
+  //       Experience Experience Experience Experience Experience Experience`,
+  //   },
+  //   {
+  //     id: "2",
+  //     title: "Web Developer",
+  //     content: "Experience with React, Next.js, and Tailwind CSS",
+  //   },
+  //   {
+  //     id: "3",
+  //     title: "Python Developer",
+  //     content: "Experience with React, Next.js, and Tailwind CSS",
+  //   },
+  // ];
   return (
     <>
       <div className="mx-auto  py-10 sm:py-48 lg:py-10  px-8">
@@ -89,9 +88,9 @@ export default function Projects() {
           ))}
         </motion.div>
       </div>
-      {experiences.map((experience) => (
+      {/* {experiences.map((experience) => (
         <Item {...experience} />
-      ))}
+      ))} */}
     </>
   );
 }

@@ -1,25 +1,6 @@
-import { useRef } from "react";
-import { motion, useScroll } from "framer-motion";
-import dits from "../assets/images/image.png";
+import { motion } from "framer-motion";
 import omninous from "../assets/images/download.png";
-
-function Item({ id, title, content }) {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["end end", "start start"],
-  });
-
-  return (
-    <section className="grid relative py-20 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4  px-8">
-      <h1 className="progress text-4xl font-medium px-1 py-4">{id}</h1>
-      <h1 className="progress text-4xl font-medium px-2 py-4 text-end">
-        {title}
-      </h1>
-      <div className="py-4 text-gray-400 col-span-2">{content}</div>
-    </section>
-  );
-}
+import dits from "../assets/images/image.png";
 
 export default function Work() {
   const text = [

@@ -1,11 +1,10 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import About from "./components/About";
 import CursorDot from "./components/CursorDot";
+import Feed from "./components/Feed";
 import Footer from "./components/Footer";
 import Landing from "./components/Landing";
 import Navbar from "./components/Navbar";
-import About from "./components/About";
-import Feed from "./components/Feed";
 import Work from "./components/Work";
 
 function App() {

@@ -1,5 +1,5 @@
-import React from "react";
 import { motion, useAnimation, useScroll, useTransform } from "framer-motion";
+import React from "react";
 import avatar from "../assets/IMG_1667.jpg";
 
 const Landing = () => {

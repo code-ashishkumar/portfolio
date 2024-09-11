@@ -1,19 +1,13 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import {
-  AnimatePresence,
-  motion,
-  useAnimation,
-  useScroll,
-} from "framer-motion";
+import { AnimatePresence, motion, useScroll } from "framer-motion";
+import { useEffect, useState } from "react";
+import { FaBriefcase, FaEnvelope, FaHome, FaUserAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import { FaHome, FaUserAlt, FaBriefcase, FaEnvelope } from "react-icons/fa";
 
 export default function Example() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const controls = useAnimation();
-  const { scrollY } = useScroll();
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const { scrollY }: any = useScroll();
   const [hidden, setHidden] = useState(false);
   const navigate = useNavigate();
 

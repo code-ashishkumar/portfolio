@@ -1,16 +1,17 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
-const lerp = (start, end, t) => start + (end - start) * t;
+const lerp = (start: number, end: number, t: number) =>
+  start + (end - start) * t;
 
 const CursorDot = () => {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
-  const dotRef = useRef(null);
+  const dotRef: React.MutableRefObject<null> = useRef(null);
   const dotPosition = useRef({ x: 0, y: 0 });
   const requestRef = useRef(null);
 
   useEffect(() => {
-    const handleMouseMove = (event) => {
+    const handleMouseMove = (event: { clientX: number; clientY: number }) => {
       setCursorPosition({ x: event.clientX, y: event.clientY });
     };
 
@@ -25,7 +26,8 @@ const CursorDot = () => {
   }, []);
 
   useEffect(() => {
-    const dot = dotRef.current;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const dot: any = dotRef.current;
     const smoothFactor = 0.1; // Adjust for smoothness
 
     const updateDotPosition = () => {

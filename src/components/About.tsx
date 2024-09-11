@@ -1,15 +1,8 @@
-import { motion, useScroll } from "framer-motion";
-import React, { useRef } from "react";
-import dits from "../assets/images/image.png";
+import { motion } from "framer-motion";
 import omninous from "../assets/images/download.png";
+import dits from "../assets/images/image.png";
 
 function About() {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["end end", "start start"],
-  });
-
   const text = [
     { content: "I'm", fade: true },
     { content: " " },

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { useState } from "react";
 import avatar from "../assets/IMG_1667.jpg";
 
 // Social media links
@@ -65,7 +65,6 @@ const Footer = () => {
           >
             <motion.div
               className="p-2 text-start  w-60 hidden lg:block "
-              target="_blank"
               rel="noopener noreferrer"
             >
               <motion.h1
@@ -83,7 +82,7 @@ const Footer = () => {
             </motion.div>
 
             {socialLinks.map((link, index) => (
-              <motion.div
+              <motion.a
                 key={index}
                 href={link.url}
                 className="p-2  hover:bg-neutral-100 hover:ease-in duration-200 cursor-pointer flex-1 "
@@ -103,9 +102,9 @@ const Footer = () => {
                 >
                   {link.name}
                 </motion.h1>
-              </motion.div>
+              </motion.a>
             ))}
-            <motion.div
+            <motion.a
               className="p-2 w-60 hidden lg:block  text-end"
               target="_blank"
               rel="noopener noreferrer"
@@ -121,7 +120,7 @@ const Footer = () => {
               >
                 2024
               </motion.h1>
-            </motion.div>
+            </motion.a>
           </motion.div>
 
           {/* Bottom Section with Image */}
