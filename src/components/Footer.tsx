@@ -70,7 +70,6 @@ const Footer = () => {
               >
                 <motion.h1
                   className="color-black"
-                  // whileHover={{ scale: 1.06 }}
                   transition={{
                     duration: 0.2,
                     type: "spring",
