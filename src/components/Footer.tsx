@@ -31,7 +31,7 @@ const Footer = () => {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <>
-      <div className="flex px-8 justify-center items-center bg-white">
+      <div className="flex min-[320px]:px-4 lg:px-8 justify-center items-center bg-white">
         <div
           className="relative overflow-hidden h-20 w-full text-start"
           onMouseEnter={() => setIsHovered(true)}
@@ -56,31 +56,32 @@ const Footer = () => {
       </div>
       <footer className="bg-white text-black py-8">
         {/* Top Section with Social Media Links */}
-        <div className="px-8 flex-1 flex-col items-center justify-center shrink ">
+        <div className="min-[320px]:px-4 lg:px-8 flex-1 flex-col items-center justify-center shrink ">
           <motion.div
             className="flex  border-y text-center border-neutral-200  divide-x "
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
           >
-            <motion.div
-              className="p-2 text-start  w-60 hidden lg:block "
-              rel="noopener noreferrer"
-            >
-              <motion.h1
-                className="color-black"
-                // whileHover={{ scale: 1.06 }}
-                transition={{
-                  duration: 0.2,
-                  type: "spring",
-                  stiffness: 400,
-                  damping: 10,
-                }}
+            {window.innerWidth > 768 ? (
+              <motion.div
+                className="p-2 text-start  w-60 min-[320px]:hidden "
+                rel="noopener noreferrer"
               >
-                Name
-              </motion.h1>
-            </motion.div>
-
+                <motion.h1
+                  className="color-black"
+                  // whileHover={{ scale: 1.06 }}
+                  transition={{
+                    duration: 0.2,
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 10,
+                  }}
+                >
+                  Name
+                </motion.h1>
+              </motion.div>
+            ) : null}
             {socialLinks.map((link, index) => (
               <motion.a
                 key={index}
