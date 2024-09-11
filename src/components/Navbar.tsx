@@ -155,7 +155,7 @@ Projects
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={toggleDock}
-          className="bg-blue-500 rounded-full w-16 h-16 flex items-center justify-center shadow-lg text-white"
+          className="bg-gray-400 rounded-full w-16 h-16 flex items-center justify-center shadow-lg text-white"
         >
           <FaHome size={24} />
         </motion.button>
@@ -163,7 +163,7 @@ Projects
         {/* Dock Navigation */}
       </div>
 
-      <div className="fixed m-auto  bottom-28 left-1/2 transform -translate-x-1/2 z-50">
+      <div className="fixed m-auto lg:hidden bottom-28 left-1/2 transform -translate-x-1/2 z-50">
         <AnimatePresence>
           {isOpen && (
             <motion.div
@@ -180,19 +180,20 @@ Projects
                   className="flex flex-col items-center"
                   whileHover={{ scale: 1.2 }}
                   transition={{ type: "spring", stiffness: 300 }}
+                  onClick={() => navigate("/work")}
                 >
                   <FaHome size={28} />
                   <span className="text-sm mt-2">Home</span>
                 </motion.a>
 
                 <motion.a
-                  href="#"
                   className="flex flex-col items-center"
                   whileHover={{ scale: 1.2 }}
                   transition={{ type: "spring", stiffness: 300 }}
+                  onClick={() => navigate("/about")}
                 >
                   <FaUserAlt size={28} />
-                  <span className="text-sm mt-2">Profile</span>
+                  <span className="text-sm mt-2">About</span>
                 </motion.a>
 
                 <motion.a
@@ -200,13 +201,14 @@ Projects
                   className="flex flex-col items-center"
                   whileHover={{ scale: 1.2 }}
                   transition={{ type: "spring", stiffness: 300 }}
+                  onClick={() => navigate("/work")}
                 >
                   <FaBriefcase size={28} />
                   <span className="text-sm mt-2">Work</span>
                 </motion.a>
 
                 <motion.a
-                  href="#"
+                  href="mailto:code.ashishkumar@gmail.com?subject=Connect&body=Hi,%20I%20would%20like%20to%20connect%20with%20you."
                   className="flex flex-col items-center"
                   whileHover={{ scale: 1.2 }}
                   transition={{ type: "spring", stiffness: 300 }}
