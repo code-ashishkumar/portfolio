@@ -83,6 +83,7 @@ const CursorDot = () => {
   return (
     <div
       ref={dotRef}
+      className="hidden lg:block"
       style={{
         position: "fixed",
         width: "40px",
