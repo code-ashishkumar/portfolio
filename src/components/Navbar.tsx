@@ -135,7 +135,7 @@ Projects
             <div className="lg:flex lg:flex-1 lg:justify-between">
               <a
                 href="mailto:code.ashishkumar@gmail.com?subject=Collaboration%20Request&body=Hi,%20I%20would%20like%20to%20collaborate%20with%20you."
-                className="text-sm hidden lg:block leading-6"
+                className="text-sm leading-6"
               >
                 Let's Collaborate <span aria-hidden="true">&rarr;</span>
               </a>
