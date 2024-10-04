@@ -87,7 +87,7 @@ function About() {
         </div>
 
         <div className="lg:col-span-2 flex flex-col gap-6">
-          <img src={dits} alt="Ashish Kumar" className=" my-2 w-16 h-10" />
+          <img src={dits} alt="Ashish Kumar" className=" my-2 w-20 h-10" />
           <div className=" font-bold  tracking-wide">
             <h1>Ditstek Innovations, Frontend Engineer</h1>
             <h1>2022 - Present, Chandigarh</h1>

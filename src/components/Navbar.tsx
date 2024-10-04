@@ -3,7 +3,7 @@
 import { AnimatePresence, motion, useScroll } from "framer-motion";
 import { useEffect, useState } from "react";
 import { FaBriefcase, FaEnvelope, FaHome, FaUserAlt } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 
 export default function Example() {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -22,7 +22,7 @@ export default function Example() {
   useEffect(() => {
     return scrollY.onChange(() => update());
   });
-
+console.log("hidden", hidden)
   const variants = {
     visible: { opacity: 1, y: 0 },
     initial: { opacity: 0, y: -75 },
@@ -33,9 +33,14 @@ export default function Example() {
 
   const toggleDock = () => setIsOpen(!isOpen);
 
+  const handleNavigate = (path: string) => {
+    toggleDock()
+    navigate(path);
+  };
+
   return (
     <>
-      <header className="w-full top-0 z-50">
+      <header className="w-full fixed top-0 z-50">
         <motion.nav
           initial="initial"
           animate="visible"
@@ -48,7 +53,7 @@ export default function Example() {
             variants={variants}
             onHoverStart={() => setHidden(false)}
             transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.6 }}
-            className="flex items-center gap-10"
+            className="flex  items-center gap-10 z-10"
           >
             <div className=" flex font-lite flex-1 lg:justify-start sm:justify-between">
               <a
@@ -132,10 +137,10 @@ Projects
   Connect <span aria-hidden="true">&rarr;</span>
 </a>
 </div> */}
-            <div className="lg:flex lg:flex-1 lg:justify-between">
+            <div className="flex md:flex-1 md:justify-between">
               <a
                 href="mailto:code.ashishkumar@gmail.com?subject=Collaboration%20Request&body=Hi,%20I%20would%20like%20to%20collaborate%20with%20you."
-                className="text-sm leading-6"
+                className="text-sm leading-6 hidden md:block"
               >
                 Let's Collaborate <span aria-hidden="true">&rarr;</span>
               </a>
@@ -163,7 +168,7 @@ Projects
         {/* Dock Navigation */}
       </div>
 
-      <div className="fixed m-auto lg:hidden bottom-28 left-1/2 transform -translate-x-1/2 z-50">
+      <div className="fixed m-auto w-96 lg:hidden bottom-28 left-1/2 transform -translate-x-1/2 z-50">
         <AnimatePresence>
           {isOpen && (
             <motion.div
@@ -180,7 +185,7 @@ Projects
                   className="flex flex-col items-center"
                   whileHover={{ scale: 1.2 }}
                   transition={{ type: "spring", stiffness: 300 }}
-                  onClick={() => navigate("/work")}
+                  onClick={() => handleNavigate("/")}
                 >
                   <FaHome size={28} />
                   <span className="text-sm mt-2">Home</span>
@@ -190,7 +195,7 @@ Projects
                   className="flex flex-col items-center"
                   whileHover={{ scale: 1.2 }}
                   transition={{ type: "spring", stiffness: 300 }}
-                  onClick={() => navigate("/about")}
+                  onClick={() => handleNavigate("/about")}
                 >
                   <FaUserAlt size={28} />
                   <span className="text-sm mt-2">About</span>
@@ -201,7 +206,7 @@ Projects
                   className="flex flex-col items-center"
                   whileHover={{ scale: 1.2 }}
                   transition={{ type: "spring", stiffness: 300 }}
-                  onClick={() => navigate("/work")}
+                  onClick={() => handleNavigate("/work")}
                 >
                   <FaBriefcase size={28} />
                   <span className="text-sm mt-2">Work</span>

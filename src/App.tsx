@@ -12,13 +12,17 @@ function App() {
     <Router>
       <CursorDot />
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/feed" element={<Feed />} />
-        {/* <Route path="/projects" element={<Projects />} /> */}
-        <Route path="/work" element={<Work />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
+      <div className="xsm:pt-14 sm:pt-16 md:pt-14 pt-8">
+        <Routes>
+
+          <Route path="/" element={<Landing />} />
+          <Route path="/feed" element={<Feed />} />
+          {/* <Route path="/projects" element={<Projects />} /> */}
+          <Route path="/work" element={<Work />} />
+          <Route path="/about" element={<About />} />
+
+        </Routes>
+      </div>
       <Footer />
     </Router>
   );

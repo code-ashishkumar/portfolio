@@ -8,6 +8,10 @@ export default {
     extend: {  fontFamily: {
       custom: ['Helvetica', 'sans-serif'],
       
+      
+    },
+    screens: {
+      'xsm': '430px'
     },
     },
   },

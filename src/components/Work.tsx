@@ -102,7 +102,7 @@ export default function Work() {
             />
           </div>
 
-          <img src={dits} alt="Ashish Kumar" className=" my-2 w-16 h-10" />
+          <img src={dits} alt="Ashish Kumar" className=" my-2 w-20 h-10" />
           <div className=" font-bold  tracking-wide">
             <h1>Chat App, Frontend Engineer</h1>
             <h1>Ditstek Innovations</h1>
