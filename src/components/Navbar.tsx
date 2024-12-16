@@ -201,6 +201,16 @@ Projects
                   <span className="text-sm mt-2">About</span>
                 </motion.a>
 
+                   <motion.a
+                  className="flex flex-col items-center"
+                  whileHover={{ scale: 1.2 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                  onClick={() => handleNavigate("/feed")}
+                >
+                  <FaUserAlt size={28} />
+                  <span className="text-sm mt-2">Feed</span>
+                </motion.a>
+
                 <motion.a
                   href="#"
                   className="flex flex-col items-center"
