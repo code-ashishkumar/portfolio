@@ -70,8 +70,8 @@ function About() {
         </div>
         <div className="py-4 text-gray-400 col-span-2 min-[320px]:shrink tracking-tight">
           My expertise spans both frontend and backend development, ensuring
-          seamless user experiences and scalable, maintainable solutions. I
-          specialize in React, Node.js, MongoDB, Express, and Django, combining
+          seamless user experiences and scalable, maintainable solutions. <br />
+          I specialize in React, Node.js, MongoDB, Express, and Django, combining
           these technologies to create robust applications. With a strong focus
           on performance optimization, clean architecture, and a keen eye for
           design, I strive to deliver impactful digital solutions that meet
@@ -99,7 +99,7 @@ function About() {
             strong emphasis on React and TypeScript. <br /> My responsibilities
             include creating scalable, reusable components and ensuring a
             seamless, interactive user experience across various platforms.
-            <br /> I work closely with backend teams to integrate RESTful APIs
+            <br />  <br /> I work closely with backend teams to integrate RESTful APIs
             and GraphQL, ensuring optimal data handling and performance. I
             specialize in state management using Redux-Toolkit and Context API,
             ensuring efficient data flow and reducing unnecessary re-renders. I
@@ -107,7 +107,7 @@ function About() {
             tools like ESLint, Prettier, and Husky for pre-commit hooks, which
             enforce clean and consistent code. My work involves utilizing UI
             libraries such as Ant Design and Material-UI, enhancing design
-            consistency and speeding up development. <br /> I regularly
+            consistency and speeding up development. <br />  <br /> I regularly
             implement performance optimizations, including lazy loading and
             code-splitting, to ensure faster load times. Additionally, I focus
             on cross-browser compatibility, accessibility (WCAG standards), and
@@ -139,9 +139,9 @@ function About() {
             A Django Developer at Ominous Solutions, I contributed to the
             development of scalable and secure web applications. I worked
             extensively with Django's robust framework, ensuring efficient
-            database interactions through Django ORM. My role involved
+            database interactions through Django ORM.  <br /> My role involved
             implementing secure RESTful APIs, managing user authentication,
-            session handling, and applying best practices like CSRF protection.
+            session handling, and applying best practices like CSRF protection. <br />
             I followed the MVC architecture, creating maintainable and flexible
             code that supported a wide range of business requirements. This
             experience strengthened my expertise in back-end development and
